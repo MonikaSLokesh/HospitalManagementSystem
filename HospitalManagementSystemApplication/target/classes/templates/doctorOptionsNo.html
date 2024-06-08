@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Doctor Options by ID</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Doctor Options by ID</h1>
+
+    <form th:action="@{/doctors/options}" method="get">
+        <label for="doctorId">Enter Doctor ID:</label>
+        <input type="text" id="doctorId" name="id">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

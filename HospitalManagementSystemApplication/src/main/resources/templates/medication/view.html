@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Medication</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>View Medication</h1>
+    <p><strong>Medication Name:</strong> <span th:text="${medication.medicationName}"></span></p>
+    <p><strong>Dosage:</strong> <span th:text="${medication.dosage}"></span></p>
+    <p><strong>Frequency:</strong> <span th:text="${medication.frequency}"></span></p>
+    <a th:href="@{/medications/{id}/edit(id=${medication.id})}">Edit</a>
+</div>
+</body>
+</html>

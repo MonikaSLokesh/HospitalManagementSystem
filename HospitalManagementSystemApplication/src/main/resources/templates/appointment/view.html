@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Appointment</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>View Appointment</h1>
+    <p><strong>Patient:</strong> <span th:text="${appointment.patient.name}"></span></p>
+    <p><strong>Doctor:</strong> <span th:text="${appointment.doctor.name}"></span></p>
+    <!-- Make sure to format the appointment date properly -->
+    <p><strong>Appointment Date:</strong> <span th:text="${#dates.format(appointment.appointmentDate, 'yyyy-MM-dd HH:mm')}"></span></p>
+</div>
+</body>
+</html>

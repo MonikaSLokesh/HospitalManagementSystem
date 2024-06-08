@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Book Appointment</h1>
+    <form action="/appointments/new" method="post">
+        <label for="patient">Patient:</label>
+        <!-- Assuming patientId is used to select the patient -->
+        <select id="patient" name="patient">
+            <option th:each="patient : ${patients}" th:value="${patient.id}" th:text="${patient.name}"></option>
+        </select><br>
+        <label for="doctor">Doctor:</label>
+        <!-- Assuming doctorId is used to select the doctor -->
+        <select id="doctor" name="doctor">
+            <option th:each="doctor : ${doctors}" th:value="${doctor.id}" th:text="${doctor.name}"></option>
+        </select><br>
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="datetime-local" id="appointmentDate" name="appointmentDate"><br>
+        <button type="submit">Book</button>
+    </form>
+</div>
+</body>
+</html>

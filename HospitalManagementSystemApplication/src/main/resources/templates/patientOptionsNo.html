@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Patient Options by ID</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Patient Options by ID</h1>
+
+    <form th:action="@{/patients/options}" method="get">
+        <label for="patientId">Enter Patient ID:</label>
+        <input type="text" id="patientId" name="id">
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <ul th:if="${patientId}">
+        <li><a th:href="@{/patients/{id}/edit(id=${patientId})}">Edit Patient</a></li>
+        <li><a th:href="@{/appointments/new(patientId=${patientId})}">Book Appointment</a></li>
+        <li><a th:href="@{/medications/{id}}(id=${patientId})}">View Medication</a></li>
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Doctor</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>View Doctor</h1>
+        <p><strong>Name:</strong> <span th:text="${doctor.name}"></span></p>
+        <p><strong>Specialty:</strong> <span th:text="${doctor.specialty}"></span></p>
+        <a th:href="@{/doctors/{id}/edit(id=${doctor.id})}">Edit</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Patient</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Create Patient</h1>
+    <form action="/patients/new" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="contactDetails">Contact Details:</label>
+        <input type="text" id="contactDetails" name="contactDetails"><br>
+        <label for="medicalHistory">Medical History:</label>
+        <textarea id="medicalHistory" name="medicalHistory"></textarea><br>
+        <button type="submit">Create</button>
+    </form>
+</div>
+</body>
+</html>

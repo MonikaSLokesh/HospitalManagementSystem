@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to TD Hospital</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to TD Hospital</h1>
+    <h2>Select User</h2>
+    <form action="/selectUser" method="get">
+        <input type="radio" id="doctor" name="userType" value="doctor">
+        <label for="doctor">Doctor</label><br>
+        <input type="radio" id="patient" name="userType" value="patient">
+        <label for="patient">Patient</label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

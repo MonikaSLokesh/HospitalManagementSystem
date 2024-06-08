@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Doctor Options</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Doctor Options</h1>
+    <ul>
+        <li><a th:href="@{/doctors/edit}">Edit Doctor</a></li>
+        <li><a th:href="@{/patients/view}">View Patient by ID</a></li>
+        <li><a th:href="@{/patients}">View All Patients</a></li>
+        <li><a th:href="@{/appointments/all}">View All Appointments</a></li>
+        <li><a th:href="@{/appointments/view}">View Appointment by ID</a></li>
+        <li><a th:href="@{/medications/all}">View All Medications</a></li>
+        <li><a th:href="@{/medications/view}">View Medication by ID</a></li>
+        <li><a th:href="@{/medications/edit}">Edit Medication by ID</a></li>
+    </ul>
+</div>
+</body>
+</html>
